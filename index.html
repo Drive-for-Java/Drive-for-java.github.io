@@ -1,0 +1,92 @@
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Users, Rocket } from "lucide-react";
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-gray-950 text-gray-100">
+      {/* Header */}
+      <header className="text-center py-12 bg-gradient-to-r from-purple-600 to-indigo-600">
+        <motion.h1
+          className="text-5xl font-bold mb-4"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          🚀 Your Organization Name
+        </motion.h1>
+        <p className="text-lg opacity-80">
+          Innovating • Collaborating • Building for the Future
+        </p>
+        <div className="mt-6 flex justify-center gap-4">
+          <Button variant="secondary" className="rounded-2xl shadow-lg">
+            <Github className="mr-2 h-4 w-4" /> GitHub
+          </Button>
+          <Button variant="secondary" className="rounded-2xl shadow-lg">
+            <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+          </Button>
+          <Button variant="secondary" className="rounded-2xl shadow-lg">
+            <Mail className="mr-2 h-4 w-4" /> Contact
+          </Button>
+        </div>
+      </header>
+
+      {/* About Section */}
+      <section className="max-w-5xl mx-auto py-16 px-6">
+        <h2 className="text-3xl font-semibold text-center mb-10">🌟 About Us</h2>
+        <p className="text-center text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          We are a team of passionate developers, innovators, and problem-solvers.
+          Our mission is to build impactful open-source projects, experiment with
+          cutting-edge technologies, and create a strong, collaborative community.
+        </p>
+      </section>
+
+      {/* Tech Stack */}
+      <section className="bg-gray-900 py-16">
+        <h2 className="text-3xl font-semibold text-center mb-10">🛠 Our Tech Stack</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          {["Java", "Python", "JavaScript", "React", "Node.js", "Docker", "MongoDB", "GitHub Actions"].map((tech) => (
+            <Card key={tech} className="bg-gray-800 border-gray-700">
+              <CardContent className="text-center py-6">
+                <p className="font-medium">{tech}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="max-w-5xl mx-auto py-16 px-6">
+        <h2 className="text-3xl font-semibold text-center mb-10">🚀 Featured Projects</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { title: "Project One", desc: "A cool tool solving real-world problems" },
+            { title: "Project Two", desc: "Open-source experiment with big results" },
+            { title: "Project Three", desc: "Because every org needs a fun side project" },
+          ].map((project, i) => (
+            <Card key={i} className="bg-gray-800 border-gray-700 shadow-lg hover:shadow-xl transition">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-400">{project.desc}</p>
+                <Button variant="outline" className="mt-4 w-full rounded-xl">
+                  <Rocket className="mr-2 h-4 w-4" /> View Repo
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-8 bg-gray-900 text-gray-400">
+        <p>© {new Date().getFullYear()} Your Organization Name. All Rights Reserved.</p>
+        <div className="flex justify-center gap-4 mt-4">
+          <Github className="h-5 w-5 cursor-pointer hover:text-white" />
+          <Linkedin className="h-5 w-5 cursor-pointer hover:text-white" />
+          <Mail className="h-5 w-5 cursor-pointer hover:text-white" />
+          <Users className="h-5 w-5 cursor-pointer hover:text-white" />
+        </div>
+      </footer>
+    </div>
+  );
+}
