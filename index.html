@@ -1,146 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drive For Java</title>
-  
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  
-  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+    <!-- Sun Icon -->
+    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    <!-- Moon Icon -->
+    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  </button>
 
   <!-- Hero Section -->
   <section id="hero">
     <div id="particles-js"></div>
     <div class="hero-content" data-aos="zoom-in" data-aos-duration="1200">
-      <img src="https://github.com/Drive-for-Java.png" alt="Drive For Java Logo" class="logo">
+      <div class="logo-container">
+        <img src="https://github.com/Drive-for-Java.png" alt="Drive For Java Logo" class="logo">
+      </div>
       <h1>Drive For Java</h1>
       <p class="tagline">Connect · Code · Collaborate</p>
       <a href="#bio" class="cta-btn">Explore More</a>
     </div>
   </section>
 
-  <!-- Bio Section -->
-  <section id="bio" data-aos="fade-up">
-    <h2>About Us</h2>
-    <p>
-      Drive For Java is a passionate global community dedicated to empowering developers.  
-      Our mission is simple: to connect learners and professionals, to share knowledge, and to build 
-      powerful projects together.  
-    </p>
-    <p>
-      Beyond code, we foster meaningful collaboration and mentorship, ensuring that everyone 
-      has the opportunity to grow their skills.  
-      Whether you are a beginner eager to contribute or a seasoned developer looking to 
-      collaborate on advanced projects — this is your home.  
-    </p>
-    <p>
-      At <b>Drive For Java</b>, collaboration is not just encouraged, it is celebrated.  
-      Together, we’re creating innovative tools, open-source repositories, and a 
-      supportive network that inspires future generations of developers.  
-    </p>
-  </section>
+  <!-- Main Content Wrapper -->
+  <main class="content-wrapper">
 
-  <!-- Code of Conduct Section -->
-  <section id="coc" data-aos="fade-up">
-    <h2>Code of Conduct</h2>
-    <p>
-      To ensure a welcoming and inclusive environment, we ask all members of our community 
-      to follow this Code of Conduct:
-    </p>
-    <ul>
-      <li><b>Respect and Inclusivity:</b> Treat all contributors with kindness. We do not tolerate harassment, discrimination, or disrespectful behavior.</li>
-      <li><b>Collaboration:</b> Support one another, share knowledge, and contribute constructively to discussions and code reviews.</li>
-      <li><b>Openness:</b> Value diverse perspectives and experiences. Different backgrounds bring stronger solutions.</li>
-      <li><b>Professionalism:</b> Use welcoming and appropriate language across all interactions, whether in code, issues, or discussions.</li>
-      <li><b>Constructive Feedback:</b> Critique ideas, not people. Provide actionable and respectful suggestions.</li>
-      <li><b>Zero Tolerance for Harassment:</b> Any form of intimidation, offensive comments, or personal attacks are prohibited.</li>
-      <li><b>Reporting Issues:</b> If you experience or witness a violation, report it to the maintainers immediately. 
-          We are committed to investigating and addressing issues promptly.</li>
-      <li><b>Shared Responsibility:</b> Every member is responsible for creating a safe and positive community space.</li>
-    </ul>
-    <p>
-      By participating in this community, you agree to uphold these values and contribute to an environment 
-      where collaboration thrives and every voice matters.  
-    </p>
-  </section>
+    <!-- Bio Section -->
+    <section id="bio" class="glass-card" data-aos="fade-up">
+      <div class="card-glow"></div>
+      <h2>About Us</h2>
+      <div class="text-content">
+        <p>Drive For Java is a passionate global community dedicated to empowering developers. Our mission is simple: to connect learners and professionals, to share knowledge, and to build powerful projects together.</p>
+        <p>Beyond code, we foster meaningful collaboration and mentorship, ensuring that everyone has the opportunity to grow their skills. Whether you are a beginner eager to contribute or a seasoned developer looking to collaborate on advanced projects — this is your home.</p>
+        <p>At <b>Drive For Java</b>, collaboration is not just encouraged, it is celebrated. Together, we’re creating innovative tools, open-source repositories, and a supportive network that inspires future generations of developers.</p>
+      </div>
+    </section>
 
-  <!-- Importance of Collaboration -->
-  <section id="importance" data-aos="fade-up">
-    <h2>Why Collaboration Matters</h2>
-    <p>
-      Collaboration is the heartbeat of Drive For Java.  
-      In the world of software development, teamwork fuels innovation and leads to impactful outcomes.  
-    </p>
-    <ul>
-      <li><b>Learn Faster:</b> Share experiences and learn from peers worldwide.</li>
-      <li><b>Build Bigger:</b> Collaborate on projects beyond the scope of individual effort.</li>
-      <li><b>Stronger Network:</b> Connect with developers, mentors, and innovators across the globe.</li>
-      <li><b>Empower Others:</b> Contributing to open-source inspires and helps future developers.</li>
-    </ul>
-    <p>
-      Together, we are not just coding — we are building a better tomorrow for developers everywhere.
-    </p>
-  </section>
+    <!-- Code of Conduct -->
+    <section id="coc" class="glass-card" data-aos="fade-up">
+      <div class="card-glow"></div>
+      <h2>Code of Conduct</h2>
+      <div class="text-content">
+        <p>To ensure a welcoming and inclusive environment, we ask all members of our community to follow this Code of Conduct:</p>
+        <ul class="interactive-list">
+          <li><b>Respect and Inclusivity:</b> Treat all contributors with kindness. We do not tolerate harassment, discrimination, or disrespectful behavior.</li>
+          <li><b>Collaboration:</b> Support one another, share knowledge, and contribute constructively to discussions and code reviews.</li>
+          <li><b>Openness:</b> Value diverse perspectives and experiences. Different backgrounds bring stronger solutions.</li>
+          <li><b>Professionalism:</b> Use welcoming and appropriate language across all interactions, whether in code, issues, or discussions.</li>
+          <li><b>Constructive Feedback:</b> Critique ideas, not people. Provide actionable and respectful suggestions.</li>
+          <li><b>Zero Tolerance for Harassment:</b> Any form of intimidation, offensive comments, or personal attacks are prohibited.</li>
+          <li><b>Reporting Issues:</b> If you experience or witness a violation, report it to the maintainers immediately. We are committed to investigating and addressing issues promptly.</li>
+          <li><b>Shared Responsibility:</b> Every member is responsible for creating a safe and positive community space.</li>
+        </ul>
+        <p>By participating in this community, you agree to uphold these values and contribute to an environment where collaboration thrives and every voice matters.</p>
+      </div>
+    </section>
 
-  <!-- Invitation Section -->
-  <section id="invite" data-aos="fade-up">
-    <h2>Join Us</h2>
-    <p>
-      We’re always looking for <b>passionate members</b> to collaborate.  
-      Join our Community and Contribute to our awesome repos.  
-    </p>
-    <div align="center">💖 Your Work can make this community glow and shine in Moonlight 💖</div>
+    <!-- Importance of Collaboration -->
+    <section id="importance" class="glass-card" data-aos="fade-up">
+      <div class="card-glow"></div>
+      <h2>Why Collaboration Matters</h2>
+      <div class="text-content">
+        <p>Collaboration is the heartbeat of Drive For Java. In the world of software development, teamwork fuels innovation and leads to impactful outcomes.</p>
+        <ul class="interactive-list">
+          <li><b>Learn Faster:</b> Share experiences and learn from peers worldwide.</li>
+          <li><b>Build Bigger:</b> Collaborate on projects beyond the scope of individual effort.</li>
+          <li><b>Stronger Network:</b> Connect with developers, mentors, and innovators across the globe.</li>
+          <li><b>Empower Others:</b> Contributing to open-source inspires and helps future developers.</li>
+        </ul>
+        <p>Together, we are not just coding — we are building a better tomorrow for developers everywhere.</p>
+      </div>
+    </section>
 
-    <div align="center">
-      <h3>🌟 Your Face Here?</h3>
-      <table>
-        <tr>
-          <td>
-            <p>
-              <a href="https://github.com/Drive-for-Java/support/issues/new?assignees=&labels=invite+me+to+the+organisation&template=invitation.yml&title=Please+invite+me+to+the+GitHub+Community+Organization">
-                <img src="https://avatars.githubusercontent.com/u/0?v=4" width="80" alt="Your Avatar" title="Your Avatar" /><br />
-                <sub><b>Future Legend</b></sub><br />
-                <sup>@yourusername</sup>
-              </a>
-            </p>
-          </td>
-        </tr>
-      </table>
-      <p>
-        We're on the lookout for <strong>elite-level developers</strong> to join our fast-moving, global, modern team. <br />
-        If you're a builder with vision, speed, and taste - we want to see you here. 
-      </p>
-      <p>
-        <a href="https://github.com/Drive-for-Java/support/issues/new?assignees=&labels=invite+me+to+the+organisation&template=invitation.yml&title=Please+invite+me+to+the+GitHub+Community+Organization">👾 Join the Drive-for-Java</a> and make your mark on the future.
-      </p>
-    </div>
-  </section>
+    <!-- Invitation Section -->
+    <section id="invite" class="glass-card" data-aos="fade-up">
+      <div class="card-glow"></div>
+      <h2>Join Us</h2>
+      <div class="text-content center-align">
+        <p>We’re always looking for <b>passionate members</b> to collaborate. Join our Community and Contribute to our awesome repos.</p>
+        
+        <div class="shimmer-text">
+          💖 Your Work can make this community glow and shine in Moonlight 💖
+        </div>
 
-  <!-- Footer -->
+        <div class="invite-box">
+          <h3>🌟 Your Face Here?</h3>
+          <div class="avatar-wrap">
+            <a href="https://github.com/Drive-for-Java/support/issues/new?assignees=&labels=invite+me+to+the+organisation&template=invitation.yml&title=Please+invite+me+to+the+GitHub+Community+Organization" class="profile-link">
+              <img src="https://avatars.githubusercontent.com/u/0?v=4" alt="Your Avatar">
+              <div class="profile-info">
+                <span class="rank">Future Legend</span>
+                <span class="handle">@yourusername</span>
+              </div>
+            </a>
+          </div>
+          <p>We're on the lookout for <strong>elite-level developers</strong> to join our fast-moving, global, modern team. <br>If you're a builder with vision, speed, and taste - we want to see you here.</p>
+          <a href="https://github.com/Drive-for-Java/support/issues/new?assignees=&labels=invite+me+to+the+organisation&template=invitation.yml&title=Please+invite+me+to+the+GitHub+Community+Organization" class="cta-btn small">👾 Join the Drive-for-Java</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
   <footer>
     <p>© 2025 Drive For Java. All rights reserved.</p>
-    <div class="socials">
-      <!-- Paste your social block here -->
-      <div align="center">
-        <!-- ✅ Your full socials block from earlier goes here -->
-      </div>
-    </div>
   </footer>
 
-  <!-- Libraries -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
-
